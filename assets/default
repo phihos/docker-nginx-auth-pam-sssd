@@ -3,6 +3,7 @@ server {
 	listen [::]:80 default_server;
 	root /var/www/html;
 	location ~/(?<group>(.+)) {
+		add_header Content-Type text/plain;
 		return 200 $group;
 	}
 }
