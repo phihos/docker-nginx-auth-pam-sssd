@@ -7,6 +7,9 @@ server {
 		auth_pam_service_name "nginx_exec";
 		auth_pam_set_pam_env  on;
 		add_header Content-Type text/plain;
-		return 200 $group;
+		try_files DUMMY @return204;
+	}
+	location @return204 {
+  		return 204;
 	}
 }
