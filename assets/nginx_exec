@@ -1,4 +1,2 @@
-auth    [success=1 default=ignore]     pam_sss.so use_first_pass
-auth	requisite	 pam_deny.so
-auth	required			pam_permit.so
-account [default=bad success=ok user_unknown=ignore]     pam_sss.so
+auth    required     pam_sss.so
+account required     pam_sss.so
