@@ -3,6 +3,9 @@ server {
 	listen [::]:80 default_server;
 	root /var/www/html;
 	location ~/(?<group>(.+)) {
+		auth_pam              "Group Auth";
+		auth_pam_service_name "nginx_exec";
+		auth_pam_set_pam_env  on;
 		add_header Content-Type text/plain;
 		return 200 $group;
 	}
