@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USER=${PAM_RUSER}
+USER=${PAM_USER}
 GROUP=$(echo $REQUEST | awk '{print $2;}' | tr -d '/')
 
 # check if user is in group
