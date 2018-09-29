@@ -11,6 +11,7 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/
 COPY assets/nsswitch.conf /etc/nsswitch.conf
 COPY assets/default /etc/nginx/sites-available/default
 COPY assets/nginx_exec /etc/pam.d/nginx_exec
+COPY assets/check_group.sh /check_group.sh
 
 EXPOSE 80
 
