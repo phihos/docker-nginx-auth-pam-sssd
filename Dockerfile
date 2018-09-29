@@ -12,10 +12,12 @@ COPY assets/nsswitch.conf /etc/nsswitch.conf
 COPY assets/default /etc/nginx/sites-available/default
 COPY assets/nginx_exec /etc/pam.d/nginx_exec
 COPY assets/check_group.sh /check_group.sh
+COPY assets/entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /check_group.sh
-RUN chmod 666 /dev/console
+RUN chmod +x /entrypoint.sh
 
 EXPOSE 80
 
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]
