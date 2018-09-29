@@ -13,6 +13,9 @@ COPY assets/default /etc/nginx/sites-available/default
 COPY assets/nginx_exec /etc/pam.d/nginx_exec
 COPY assets/check_group.sh /check_group.sh
 
+RUN chmod +x /check_group.sh
+RUN chmod 666 /dev/console
+
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
