@@ -50,7 +50,7 @@ Make sure that */etc/nssswitch.conf* is not modified and the backend volume is m
 
 With
 ```
-groups <user>
+groups <username>
 ```
 you can check whether the user is actually in that group.
 
