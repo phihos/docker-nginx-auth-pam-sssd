@@ -12,17 +12,17 @@ Every path is protected by HTTP basic auth. The authentication succeeds and retu
 The container must mount */var/lib/sss* from another container for authentication.  
 An example of such a container can be found [here](https://github.com/phihos/docker-sssd-krb5-ldap/).
 
-*Example:*
+### Example
 
 *User: tom  
 Password: secret  
 Tom's groups: groupA,groupB*
 
-*If we visit http://<container-ip>:<port>/groupA and enter "tom" as user and "secret" and password we get a blank page and 204 as status code.*
+*If we visit http://\<container-ip>:\<port>/groupA and enter "tom" as user and "secret" and password we get a blank page and 204 as status code.*
 
-*If we visit http://<container-ip>:<port>/groupC and enter "tom" as user and "secret" and password we get the default Nginx 403 error page.*
+*If we visit http://\<container-ip>:\<port>/groupC and enter "tom" as user and "secret" and password we get the default Nginx 403 error page.*
 
-*If we visit http://<container-ip>:<port>/groupA and enter "tom" as user and "wrongpasswd" and password we get the default Nginx 403 error page.*
+*If we visit http://\<container-ip>:\<port>/groupA and enter "tom" as user and "wrongpasswd" and password we get the default Nginx 403 error page.*
 
 ## Running
 
