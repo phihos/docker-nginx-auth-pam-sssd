@@ -1,4 +1,8 @@
 # Docker Image with Nginx Auth-PAM and SSSD
+
+[![Automated Build](https://img.shields.io/docker/automated/phihos/nginx-auth-pam-sssd.svg)](https://hub.docker.com/r/phihos/nginx-auth-pam-sssd/)
+[![Docker Build Status](https://img.shields.io/docker/build/phihos/nginx-auth-pam-sssd.svg)](https://hub.docker.com/r/phihos/nginx-auth-pam-sssd/)
+
 A Docker image that configures Nginx auth-pam with the SSSD client.
 
 ## Introduction
