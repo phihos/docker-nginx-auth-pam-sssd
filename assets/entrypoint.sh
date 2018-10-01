@@ -1,5 +1,5 @@
 #!/bin/bash
 
-chmod 666 /dev/console
+chmod 666 /dev/stdout
 
 exec "$@"
